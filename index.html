@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title></title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+   <script type="module" src="controller.js"></script>
+   <script type="module" src="model.js"></script>
+   <script type="module" src="recipeView.js"></script>
+   <script type="module" src="config.js"></script>
+   <script type="module" src="searchView.js"></script>
+   <script type="module" src="view.js"></script>
+   <script type="module" src="resultView.js"></script>
+   <script type="module" src="bookmarkView.js"></script>
+   <script type="module" src="addpageview.js"></script>
+</head>
+
+<body>
+   <div class="app">
+      <div class="header">
+         <h6 class="headerTitle">🍽️ AllRecipes</h6>
+         <input type="text" class="search" placeholder="Search...">
+         <span class="bookmark">
+            bookmark</span>
+           
+            <ul class="bookmarks hidden">
+        
+            </ul>
+            
+
+         <span class="addBtn">Add</span>
+      </div>
+   
+      <div class="allReciepContainer">
+
+         <ul class="reciepList">
+         </ul>
+         <div class="buttons">
+         </div>
+      </div>
+      <div class="reciepContainer">
+         <div class="pre">
+            <p>
+               Start searching Your Recipe <span class="material-symbols-outlined">
+                  sentiment_satisfied
+               </span>
+            </p>
+         </div>
+      </div>
+   </div>
+    <div class="overlay hidden"></div>
+         <div class="addPage hidden">
+           
+            <button class="btnClose">X</button>
+            <form>
+            <div class="recipeData">
+               <h1 class="recipeDataTitle">Recipe Data</h1>
+               <label>Title</label>
+               <input type="text" name="title" value="Test24">
+                <label>URL</label>
+                <input type="text" name="sourceUrl" value="Test24">
+                <label>Image Url</label>
+                 <input type="text" name="image" value="Test24">
+                  <label>Publisher</label>
+                  <input type="text" name="publisher" value="Test24">
+                   <label>Prep Time</label>
+                   <input type="text" name="cookingTime" value="23">
+                    <label>Servings</label>
+                    <input type="text" name="servings" value="23">
+                   
+            </div>
+            <div class="numberOfingredients">
+               <h6 class="recipeDataTitle">Ingredients</h6>
+               <label>Ingredient 1</label>
+               <input type="text" name="ingredient-1" value="5,kg,rice" placeholder="Formate: Quantity,Unit, Description">
+               <label>Ingredient 2</label>
+               <input type="text" name="ingredient-2" value="5,kg,rice" placeholder="Formate: Quantity,Unit, Description">
+               <label>Ingredient 3</label>
+               <input type="text" name="ingredient-3" value="5,kg,rice" placeholder="Formate: Quantity,Unit, Description">
+               <label>Ingredient 4</label>
+               <input type="text" name="ingredient-4" value="5,kg,rice" placeholder="Formate: Quantity,Unit, Description">
+               <label>Ingredient 5</label>
+               <input type="text" name="ingredient-5" value="5,kg,rice" placeholder="Formate: Quantity,Unit, Description">
+               <label>Ingredient 6</label>
+               <input type="text" name="ingredient-6" value="5,kg,rice" placeholder="Formate: Quantity,Unit, Description">
+            </div>
+            <button type="submit">Upload</button>
+            </form>
+         </div>
+</body>
+
+</html>

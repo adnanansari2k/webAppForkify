@@ -1,0 +1,373 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.app {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+
+}
+
+.header {
+   width: 100%;
+   height: 50px;
+   display: flex;
+   justify-content: flex-start;
+   border-bottom: 1px solid black;
+   align-items: center;
+   background: hsla(43, 100%, 52%, 1);
+   color: hsla(18, 72%, 44%, 1);
+   grid-area: h
+}
+
+.headerTitle {
+   font-size: 20px;
+   font-weight: 600
+}
+
+.search {
+   border: 0;
+   background: transparent;
+   border-bottom: 3px solid black;
+   width: 80px;
+   margin-left: 20px;
+}
+
+.bookmark,
+.addBtn {
+   font-size: 15px;
+   color: #fff;
+   margin-left: 30px;
+   border-radius: 3px;
+   padding: 5px 2px;
+   background: hsla(30, 99%, 46%, 1);
+   box-shadow: -3px -3px 5px hsla(30, 0%, 100%, 0.5), 3px 3px 5px hsla(30, 6%, 23%, 1);
+   font-weight: 200;
+
+}
+
+
+.reciepContainer {
+   width: 100vw;
+   height: 100%;
+   border: 1px solid black;
+   background: #FFF9EB
+}
+
+.allReciepContainer {
+   width: 100%;
+   height: 30%;
+   border: 1px solid black;
+   background: #FFF9EB;
+   
+}
+
+.reciepList {
+   overflow: scroll;
+   list-style: none;
+   display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   
+}
+
+.reciep {
+   text-align: center;
+   padding: 10px 5px;
+   font-size: 1rem;
+   font-weight: 400;
+   letter-spacing: 1px;
+   width: 45%;
+   height: 60px;
+   margin: 5px 2px;
+   background: #FFE8BE;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1.5fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   gap: 0px 0px;
+   grid-template-areas:
+      "image title title title"
+      "image publisher publisher publisher"
+   ;
+
+}
+
+.reciepImgList {
+   width: 50px;
+   height: 50px;
+   grid-area: image
+}
+
+.reciepImg {
+   width: 100%;
+   height: 200px;
+   border: 1px solid black;
+   filter: saturate(2) blur(0.2px)
+}
+
+.publisher {
+   grid-area: publisher;
+}
+
+.reciepTitleList {
+
+   grid-area: title
+}
+
+.title {
+   position: relative;
+   left: 50%;
+   top: -7%;
+   transform: translate(-50%, 20%) skewY(-6deg);
+   color: #fff;
+   font-weight: 700;
+   font-size: 1.2rem;
+   text-transform: uppercase;
+   width: 90%;
+   text-align: center;
+   background: #FCBE52;
+   box-decoration-break: clone;
+   background-image: linear-gradient(
+        to right bottom,#FAD232,#EF8C2C
+      );
+}
+
+.rciepHeader {
+   display: flex;
+   justify-content: space-evenly;
+   margin-top: -20px;
+   width: 100%;
+   
+}
+
+.servings,
+.cookingTime {
+   font-size: 20px;
+   letter-spacing: 2px;
+   margin-left: -10px;
+   font-weight: 400;
+
+}
+
+.minus,
+.plus {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   margin: 2px 5px;
+
+}
+
+.reciepIngredients {
+   width: 80%;
+   height: 20%;
+   background: #D1D1D2;
+   margin: 0 auto;
+   padding: 5px 20px;
+   overflow: scroll;
+}
+
+.iTitle {
+   text-align: center;
+   letter-spacing: 3px;
+   font-size: 20px;
+   font-weight: 500;
+
+}
+
+.ingredients {
+   display: flex;
+   flex-wrap: wrap;
+   
+}
+
+.ingredient {
+   list-style: none;
+   width: 50%;
+   margin-top: 3px;
+   font-size: 15px;
+   font-weight: 200
+}
+
+.cdTitle {
+   text-align: center;
+   letter-spacing: 3px;
+   font-size: 20px;
+   font-weight: 500;
+   margin-left: 110px;
+}
+
+.websiteButton {
+   width: 200px;
+   height: 30px;
+   border-radius: 10px;
+   background: #D8A654;
+   display: block;
+   margin: 0 auto;
+}
+.pre{
+   position: absolute;
+   top:70%;
+   left:50%;
+   transform:translate(-50%,-50%)
+}
+.pre p{
+   font-size: 30px;
+   font-weight: 600;
+   letter-spacing: 3px;
+   
+}
+p .material-symbols-outlined{
+   font-size: 50px;
+}
+.loader{
+   position: relative;
+   top:20%;
+   left:40%;
+}
+.loader span{
+   fill: red;
+   animation:rotate 1s ease-in-out;
+}
+@keyframes rotate{
+   0%{
+      transform: rotate(0deg)
+   }
+   25% {
+      transform: rotate(90deg)
+   }
+   50%{
+      transform: rotate(180deg)
+   }
+   100% {
+      transform: rotate(360deg)
+   }
+}
+
+.error{
+   position: relative;
+   top:50%;
+  
+}
+a:link, a:visited {
+  display: block;
+  color:#A40303;
+  text-decoration: none;
+  display: inline-block;
+  width:120px;
+}
+
+.buttons{
+   padding: 0 10px;
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.btn{
+   width: 100px;
+   height: 40px;
+   background: #F79B84;
+   border: 1px solid black;
+   border-radius: 3px;
+   color:#FFFFFF
+}
+.btn:hover{
+   background: #FF7878;
+}
+.hide{
+   opacity: 0;
+}
+
+.savedActive{
+   color: red;
+}
+.bookmarks{
+   position: absolute;
+   top:50px;
+   right:0;
+   width:200px;
+   
+   background:#FFA544;
+   z-index: 10;
+   padding: 5px
+}
+.bookmarks li{
+   width: 100%;
+}
+.hidden{
+   display: none ;
+   
+}
+
+.addPage{
+   position: absolute;
+   top: 50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   width:80%;
+   height: 40%;
+   background: #F9F9FF;
+   border-radius: 10px;
+   padding: 10px 10px;
+   z-index: 60;
+}
+label{
+   font-size: 15px;
+   letter-spacing: 3px;
+   font-weight: 300
+}
+placeholder {
+   font-size: 1px;
+}
+form input{
+   width:80%;
+   border: 0.5px solid black;
+   color:gray;
+   font-size: 10px;
+   height :20px;
+   letter-spacing: 2px;
+   text-align: center; 
+}
+.btnClose{
+   position: relative;
+   left:95%;
+   font-size: 20px;
+   background : Transparent;
+   border: 0px;
+   border-radius: 80%;
+}
+.recipeDataTitle{
+   font-size: 20px;
+   letter-spacing: 2px;
+   font-weight: 600
+}
+.numberOfingredients{
+   grid-area: two;
+}
+
+.recipeData{
+   grid-area: one
+}
+
+form{
+   display: grid;
+   grid-template-areas: "one two";
+  grid-column-gap:20px;
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  backdrop-filter: blur(2px)
+}
+button[type=submit]{
+   width: 100px;
+   height: 40px;
+   border-radius:8px;
+   background: #C3CDDC;
+   border: 0px solid black;
+}
